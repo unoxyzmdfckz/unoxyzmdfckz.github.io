@@ -2,5 +2,5 @@
 
 ## Links
 
-[MMW NOTES](/notes) |
+[MMW CHAPTER 2](/school/mmw/chapter2.html) |
 [IDK KALIMOT NAKO ANI](/kayeqt/)
