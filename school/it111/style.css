@@ -796,3 +796,47 @@ pre code {
   border: 2px solid var(--bg-0);
 }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* Interactive input practice boxes */
+.answer-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: rgba(10, 14, 26, 0.6);
+  color: var(--text);
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+  font-size: 15px;
+  margin: 8px 0;
+  transition: all 0.25s var(--transition);
+}
+
+.answer-input:focus {
+  outline: none;
+  border-color: var(--accent);
+  background: rgba(10, 14, 26, 0.85);
+  box-shadow: 0 0 0 4px rgba(74, 124, 247, 0.2);
+}
+
+.answer-input::placeholder {
+  color: var(--text-mute);
+}
+
+.hint {
+  margin-top: 10px;
+  padding: 8px 14px;
+  background: rgba(74, 124, 247, 0.08);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 13.5px;
+  color: var(--text-dim);
+  display: none;
+}
+
+.hint.show { display: block; }
+
+.question.wrong-shown .hint { display: block; }
+
+.question input[type="text"] {
+  font-family: 'JetBrains Mono', 'Consolas', monospace;
+}
