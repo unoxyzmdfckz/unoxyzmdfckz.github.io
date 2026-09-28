@@ -402,7 +402,8 @@
       <h3>Decimal: Base 10</h3>
 
       <p>Our everyday number system is called <strong>base 10</strong> because it uses exactly ten unique digits:
-        <strong>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</strong>.</p>
+        <strong>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</strong>.
+      </p>
 
       <p>Each position in a decimal number represents a <strong>power of 10</strong>. This is called <strong>place
           value</strong>.</p>
@@ -454,7 +455,8 @@
       <h3>Binary: Base 2</h3>
 
       <p>Binary uses only two digits: <strong>0</strong> and <strong>1</strong>. Each position represents a
-        <strong>power of 2</strong>.</p>
+        <strong>power of 2</strong>.
+      </p>
 
       <div class="table-wrap">
         <table>
@@ -1119,6 +1121,14 @@ C:\> mkdir IT111</code></pre>
       const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
       document.getElementById('scrollProgress').style.width = p + '%';
     });
+  </script>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => { });
+      });
+    }
   </script>
 
 </body>
