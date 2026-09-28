@@ -1,568 +1,1126 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nyok - Computer Systems</title>
-<link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nyok - Computer Systems</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="scroll-progress" id="scrollProgress"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
 
-<div class="layout">
-  <aside class="sidebar">
-    <div class="sidebar-brand">
-      <div class="brand-logo">IT</div>
-      <div class="brand-text">
-        <h1>IT111 Notes</h1>
-        <p>Module 2</p>
-      </div>
-    </div>
-    <nav class="sidebar-nav">
-      <a href="index.html">Home</a>
-      <a href="module1.html">History of Computing</a>
-      <a href="module2.html" class="active">Computer Systems</a>
-      <a href="module3.html">Networks &amp; Security</a>
-    </nav>
-  </aside>
-
-  <main class="content">
-    <div class="page-hero">
-      <span class="badge">Module 2</span>
-      <h1>Computer Systems</h1>
-      <p>How computers think, process, and communicate — inside the machine.</p>
-    </div>
-
-    <h2>Topic 1: Concept of a Computer System</h2>
-
-    <p>A computer is an electronic device that accepts data, processes it according to instructions, stores it, and produces information.</p>
-
-    <h3>The IPO Cycle</h3>
-    <ul>
-      <li><strong>Input</strong> - data enters (keyboard, mouse, touchscreen, microphone, camera)</li>
-      <li><strong>Process</strong> - central units manipulate and calculate the data</li>
-      <li><strong>Output</strong> - readable result (monitor, speakers, printer)</li>
-      <li><strong>Storage</strong> - saves data for later retrieval</li>
-    </ul>
-
-    <h3>What Makes Computers Useful?</h3>
-    <ul>
-      <li><strong>Speed</strong> - millions or billions of operations quickly</li>
-      <li><strong>Accuracy</strong> - highly accurate with correct instructions</li>
-      <li><strong>Storage</strong> - enormous amounts of information reliably</li>
-      <li><strong>Automation</strong> - complex tasks automatically once instructed</li>
-      <li><strong>Consistency</strong> - repeats operations without getting tired</li>
-      <li><strong>Connectivity</strong> - communicates with other devices</li>
-    </ul>
-
-    <h3>But Computers Aren't "Smart" by Themselves</h3>
-    <p>Computers don't think like humans, understand intentions, know truth, or decide without instructions. They blindly follow instructions.</p>
-
-    <h3>Computers Come in Different Forms</h3>
-    <ul>
-      <li><strong>Personal &amp; Mobile</strong> - desktops, laptops, tablets, smartphones</li>
-      <li><strong>Enterprise &amp; Scale</strong> - servers, mainframes, supercomputers</li>
-      <li><strong>Integrated Systems</strong> - embedded computers inside everyday objects</li>
-    </ul>
-    <div class="example-box">Smartwatches, ATMs, modern cars, smart refrigerators, and gaming consoles are all computers in disguise.</div>
-
-    <!-- QUIZ M2T1 -->
-    <div class="quiz-section">
-      <h3>Quiz - Concept of Computer System</h3>
-
-      <div class="question" data-answer="b">
-        <p>1. What does a computer do with data according to the IPO cycle?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q1" value="a"> a) Only stores it</label>
-          <label><input type="radio" name="m2q1" value="b"> b) Accepts, processes, stores, and produces information</label>
-          <label><input type="radio" name="m2q1" value="c"> c) Only displays it</label>
-          <label><input type="radio" name="m2q1" value="d"> d) Deletes it immediately</label>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-logo">IT</div>
+        <div class="brand-text">
+          <h1>IT111 Notes</h1>
+          <p>Module 2</p>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html">Home</a>
+        <a href="module1.html">History of Computing</a>
+        <a href="module2.html" class="active">Computer Systems</a>
+        <a href="module3.html">Networks &amp; Security</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <div class="page-hero">
+        <span class="badge">Module 2</span>
+        <h1>Computer Systems</h1>
+        <p>How computers think, process, and communicate — inside the machine.</p>
       </div>
 
-      <div class="question" data-answer="c">
-        <p>2. Which is NOT a characteristic that makes computers useful?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q2" value="a"> a) Speed</label>
-          <label><input type="radio" name="m2q2" value="b"> b) Accuracy</label>
-          <label><input type="radio" name="m2q2" value="c"> c) Independent thinking</label>
-          <label><input type="radio" name="m2q2" value="d"> d) Consistency</label>
+      <h2>Topic 1: Concept of a Computer System</h2>
+
+      <p>A computer is an electronic device that accepts data, processes it according to instructions, stores it, and
+        produces information.</p>
+
+      <h3>The IPO Cycle</h3>
+      <ul>
+        <li><strong>Input</strong> - data enters (keyboard, mouse, touchscreen, microphone, camera)</li>
+        <li><strong>Process</strong> - central units manipulate and calculate the data</li>
+        <li><strong>Output</strong> - readable result (monitor, speakers, printer)</li>
+        <li><strong>Storage</strong> - saves data for later retrieval</li>
+      </ul>
+
+      <h3>What Makes Computers Useful?</h3>
+      <ul>
+        <li><strong>Speed</strong> - millions or billions of operations quickly</li>
+        <li><strong>Accuracy</strong> - highly accurate with correct instructions</li>
+        <li><strong>Storage</strong> - enormous amounts of information reliably</li>
+        <li><strong>Automation</strong> - complex tasks automatically once instructed</li>
+        <li><strong>Consistency</strong> - repeats operations without getting tired</li>
+        <li><strong>Connectivity</strong> - communicates with other devices</li>
+      </ul>
+
+      <h3>But Computers Aren't "Smart" by Themselves</h3>
+      <p>Computers don't think like humans, understand intentions, know truth, or decide without instructions. They
+        blindly follow instructions.</p>
+
+      <h3>Computers Come in Different Forms</h3>
+      <ul>
+        <li><strong>Personal &amp; Mobile</strong> - desktops, laptops, tablets, smartphones</li>
+        <li><strong>Enterprise &amp; Scale</strong> - servers, mainframes, supercomputers</li>
+        <li><strong>Integrated Systems</strong> - embedded computers inside everyday objects</li>
+      </ul>
+      <div class="example-box">Smartwatches, ATMs, modern cars, smart refrigerators, and gaming consoles are all
+        computers in disguise.</div>
+
+      <!-- QUIZ M2T1 -->
+      <div class="quiz-section">
+        <h3>Quiz - Concept of Computer System</h3>
+
+        <div class="question" data-answer="b">
+          <p>1. What does a computer do with data according to the IPO cycle?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q1" value="a"> a) Only stores it</label>
+            <label><input type="radio" name="m2q1" value="b"> b) Accepts, processes, stores, and produces
+              information</label>
+            <label><input type="radio" name="m2q1" value="c"> c) Only displays it</label>
+            <label><input type="radio" name="m2q1" value="d"> d) Deletes it immediately</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="a">
-        <p>3. What does "Garbage In → Garbage Out" mean?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q3" value="a"> a) Wrong input leads to wrong output</label>
-          <label><input type="radio" name="m2q3" value="b"> b) Computers can fix any mistake</label>
-          <label><input type="radio" name="m2q3" value="c"> c) Computers always produce correct results</label>
-          <label><input type="radio" name="m2q3" value="d"> d) Data is automatically cleaned</label>
+        <div class="question" data-answer="c">
+          <p>2. Which is NOT a characteristic that makes computers useful?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q2" value="a"> a) Speed</label>
+            <label><input type="radio" name="m2q2" value="b"> b) Accuracy</label>
+            <label><input type="radio" name="m2q2" value="c"> c) Independent thinking</label>
+            <label><input type="radio" name="m2q2" value="d"> d) Consistency</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="d">
-        <p>4. Which of these is an example of an embedded computer?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q4" value="a"> a) Desktop PC</label>
-          <label><input type="radio" name="m2q4" value="b"> b) Laptop</label>
-          <label><input type="radio" name="m2q4" value="c"> c) Tablet</label>
-          <label><input type="radio" name="m2q4" value="d"> d) Smart refrigerator</label>
+        <div class="question" data-answer="a">
+          <p>3. What does "Garbage In → Garbage Out" mean?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q3" value="a"> a) Wrong input leads to wrong output</label>
+            <label><input type="radio" name="m2q3" value="b"> b) Computers can fix any mistake</label>
+            <label><input type="radio" name="m2q3" value="c"> c) Computers always produce correct results</label>
+            <label><input type="radio" name="m2q3" value="d"> d) Data is automatically cleaned</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="b">
-        <p>5. In the IPO cycle, what does "Process" refer to?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q5" value="a"> a) Data entering the system</label>
-          <label><input type="radio" name="m2q5" value="b"> b) The computer manipulating and calculating data</label>
-          <label><input type="radio" name="m2q5" value="c"> c) The result shown on screen</label>
-          <label><input type="radio" name="m2q5" value="d"> d) Saving data for later</label>
+        <div class="question" data-answer="d">
+          <p>4. Which of these is an example of an embedded computer?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q4" value="a"> a) Desktop PC</label>
+            <label><input type="radio" name="m2q4" value="b"> b) Laptop</label>
+            <label><input type="radio" name="m2q4" value="c"> c) Tablet</label>
+            <label><input type="radio" name="m2q4" value="d"> d) Smart refrigerator</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="score-box">Score: <span id="scoreM2T1">0</span> / 5</div>
-    </div>
-
-    <!-- ============================================================ -->
-    <h2>Topic 2: Inside a Computer System</h2>
-
-    <h3>Hardware</h3>
-    <p>Any physical component you can touch: CPU &amp; RAM, motherboard, keyboard, mouse, monitor, SSD/HDD, printer.</p>
-
-    <h3>Input Devices</h3>
-    <p>Keyboard, mouse, touchscreen, scanner, microphone, webcam, barcode reader, biometric scanner.</p>
-
-    <h3>Output Devices</h3>
-    <p>Monitor, projector, printer, speakers, headphones, haptic feedback devices.</p>
-    <div class="note">Input = Computer receives. Output = User receives.</div>
-
-    <h3>The CPU (Central Processing Unit)</h3>
-    <p>The CPU is the primary component that acts as the computer's "brain." It executes instructions and performs calculations.</p>
-    <div class="note">While often called the "brain," a CPU does not think. It strictly executes logical instructions.</div>
-
-    <h4>Inside the CPU</h4>
-    <ul>
-      <li><strong>ALU (Arithmetic and Logic Unit)</strong> - mathematical calculations, comparisons, logical operations</li>
-      <li><strong>Control Unit</strong> - directs the processor, coordinating instruction execution step-by-step</li>
-      <li><strong>Registers</strong> - very small, incredibly fast temporary storage inside the CPU</li>
-    </ul>
-
-    <h4>The CPU Cycle</h4>
-    <ol>
-      <li><strong>Fetch</strong> - get the instruction from memory</li>
-      <li><strong>Decode</strong> - understand what the instruction means</li>
-      <li><strong>Execute</strong> - perform the requested operation</li>
-    </ol>
-    <div class="example-box">When you type 25 + 17, the CPU fetches the addition instruction, decodes it as arithmetic, and executes it in the ALU. The result 42 is sent to output.</div>
-
-    <h3>RAM vs. Storage</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Feature</th><th>RAM</th><th>Storage (SSD/HDD)</th></tr></thead>
-        <tbody>
-          <tr><td>Duration</td><td>Temporary workspace</td><td>Long-term retention</td></tr>
-          <tr><td>Speed</td><td>Incredibly fast</td><td>Slower than RAM</td></tr>
-          <tr><td>Usage</td><td>Active programs</td><td>Files, apps, OS permanently</td></tr>
-          <tr><td>Power Dependency</td><td>Volatile (erased when off)</td><td>Persistent</td></tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="example-box">If you have Chrome, Word, Spotify, and VS Code open, the active parts are kept in RAM. When you shut down, RAM is cleared, but your files remain in storage.</div>
-
-    <h3>What Is Software?</h3>
-    <p>Software is a set of instructions that tells a computer exactly what to do.</p>
-
-    <h4>System Software</h4>
-    <ul>
-      <li>Operating systems (Windows, macOS)</li>
-      <li>Device drivers</li>
-      <li>Utilities (disk cleanup, antivirus)</li>
-    </ul>
-
-    <h4>Application Software</h4>
-    <ul>
-      <li>Word processors &amp; spreadsheets</li>
-      <li>Web browsers</li>
-      <li>Games &amp; media applications</li>
-    </ul>
-
-    <h3>Data vs. Information</h3>
-    <ul>
-      <li><strong>Data</strong> - raw input (numbers, text, images)</li>
-      <li><strong>Information</strong> - processed data with meaning</li>
-    </ul>
-    <div class="example-box">Data: "25, 17, 42" — just numbers. Information: "25 + 17 = 42" — the numbers now have meaning.</div>
-
-    <h3>Peopleware &amp; Procedures</h3>
-    <p><strong>People:</strong> End users, programmers, system administrators, DB admins, IT support.</p>
-    <p><strong>Procedures:</strong> Rules for operating and managing a system — secure login, backups, password resets, security incident response.</p>
-
-    <h3>The Complete Computer System</h3>
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>Component</th><th>Role</th></tr></thead>
-        <tbody>
-          <tr><td>People</td><td>The operators</td></tr>
-          <tr><td>Procedures</td><td>The rules</td></tr>
-          <tr><td>Hardware</td><td>The machine</td></tr>
-          <tr><td>Software</td><td>The instructions</td></tr>
-          <tr><td>Data</td><td>The raw input</td></tr>
-          <tr><td>Information</td><td>The final output</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <!-- QUIZ M2T2 -->
-    <div class="quiz-section">
-      <h3>Quiz - Inside a Computer</h3>
-
-      <div class="question" data-answer="b">
-        <p>1. What are the three main parts inside a CPU?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q6" value="a"> a) RAM, SSD, HDD</label>
-          <label><input type="radio" name="m2q6" value="b"> b) ALU, Control Unit, Registers</label>
-          <label><input type="radio" name="m2q6" value="c"> c) Monitor, Keyboard, Mouse</label>
-          <label><input type="radio" name="m2q6" value="d"> d) Windows, macOS, Linux</label>
+        <div class="question" data-answer="b">
+          <p>5. In the IPO cycle, what does "Process" refer to?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q5" value="a"> a) Data entering the system</label>
+            <label><input type="radio" name="m2q5" value="b"> b) The computer manipulating and calculating data</label>
+            <label><input type="radio" name="m2q5" value="c"> c) The result shown on screen</label>
+            <label><input type="radio" name="m2q5" value="d"> d) Saving data for later</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
+
+        <div class="score-box">Score: <span id="scoreM2T1">0</span> / 5</div>
       </div>
 
-      <div class="question" data-answer="a">
-        <p>2. What is the key difference between RAM and storage?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q7" value="a"> a) RAM is temporary; storage is permanent</label>
-          <label><input type="radio" name="m2q7" value="b"> b) RAM is slower than storage</label>
-          <label><input type="radio" name="m2q7" value="c"> c) Storage is inside the CPU</label>
-          <label><input type="radio" name="m2q7" value="d"> d) RAM keeps data when power is off</label>
+      <!-- ============================================================ -->
+      <h2>Topic 2: Inside a Computer System</h2>
+
+      <h3>Hardware</h3>
+      <p>Any physical component you can touch: CPU &amp; RAM, motherboard, keyboard, mouse, monitor, SSD/HDD, printer.
+      </p>
+
+      <h3>Input Devices</h3>
+      <p>Keyboard, mouse, touchscreen, scanner, microphone, webcam, barcode reader, biometric scanner.</p>
+
+      <h3>Output Devices</h3>
+      <p>Monitor, projector, printer, speakers, headphones, haptic feedback devices.</p>
+      <div class="note">Input = Computer receives. Output = User receives.</div>
+
+      <h3>The CPU (Central Processing Unit)</h3>
+      <p>The CPU is the primary component that acts as the computer's "brain." It executes instructions and performs
+        calculations.</p>
+      <div class="note">While often called the "brain," a CPU does not think. It strictly executes logical instructions.
+      </div>
+
+      <h4>Inside the CPU</h4>
+      <ul>
+        <li><strong>ALU (Arithmetic and Logic Unit)</strong> - mathematical calculations, comparisons, logical
+          operations</li>
+        <li><strong>Control Unit</strong> - directs the processor, coordinating instruction execution step-by-step</li>
+        <li><strong>Registers</strong> - very small, incredibly fast temporary storage inside the CPU</li>
+      </ul>
+
+      <h4>The CPU Cycle</h4>
+      <ol>
+        <li><strong>Fetch</strong> - get the instruction from memory</li>
+        <li><strong>Decode</strong> - understand what the instruction means</li>
+        <li><strong>Execute</strong> - perform the requested operation</li>
+      </ol>
+      <div class="example-box">When you type 25 + 17, the CPU fetches the addition instruction, decodes it as
+        arithmetic, and executes it in the ALU. The result 42 is sent to output.</div>
+
+      <h3>RAM vs. Storage</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>RAM</th>
+              <th>Storage (SSD/HDD)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Duration</td>
+              <td>Temporary workspace</td>
+              <td>Long-term retention</td>
+            </tr>
+            <tr>
+              <td>Speed</td>
+              <td>Incredibly fast</td>
+              <td>Slower than RAM</td>
+            </tr>
+            <tr>
+              <td>Usage</td>
+              <td>Active programs</td>
+              <td>Files, apps, OS permanently</td>
+            </tr>
+            <tr>
+              <td>Power Dependency</td>
+              <td>Volatile (erased when off)</td>
+              <td>Persistent</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="example-box">If you have Chrome, Word, Spotify, and VS Code open, the active parts are kept in RAM.
+        When you shut down, RAM is cleared, but your files remain in storage.</div>
+
+      <h3>What Is Software?</h3>
+      <p>Software is a set of instructions that tells a computer exactly what to do.</p>
+
+      <h4>System Software</h4>
+      <ul>
+        <li>Operating systems (Windows, macOS)</li>
+        <li>Device drivers</li>
+        <li>Utilities (disk cleanup, antivirus)</li>
+      </ul>
+
+      <h4>Application Software</h4>
+      <ul>
+        <li>Word processors &amp; spreadsheets</li>
+        <li>Web browsers</li>
+        <li>Games &amp; media applications</li>
+      </ul>
+
+      <h3>Data vs. Information</h3>
+      <ul>
+        <li><strong>Data</strong> - raw input (numbers, text, images)</li>
+        <li><strong>Information</strong> - processed data with meaning</li>
+      </ul>
+      <div class="example-box">Data: "25, 17, 42" — just numbers. Information: "25 + 17 = 42" — the numbers now have
+        meaning.</div>
+
+      <h3>Peopleware &amp; Procedures</h3>
+      <p><strong>People:</strong> End users, programmers, system administrators, DB admins, IT support.</p>
+      <p><strong>Procedures:</strong> Rules for operating and managing a system — secure login, backups, password
+        resets, security incident response.</p>
+
+      <h3>The Complete Computer System</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Component</th>
+              <th>Role</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>People</td>
+              <td>The operators</td>
+            </tr>
+            <tr>
+              <td>Procedures</td>
+              <td>The rules</td>
+            </tr>
+            <tr>
+              <td>Hardware</td>
+              <td>The machine</td>
+            </tr>
+            <tr>
+              <td>Software</td>
+              <td>The instructions</td>
+            </tr>
+            <tr>
+              <td>Data</td>
+              <td>The raw input</td>
+            </tr>
+            <tr>
+              <td>Information</td>
+              <td>The final output</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- QUIZ M2T2 -->
+      <div class="quiz-section">
+        <h3>Quiz - Inside a Computer</h3>
+
+        <div class="question" data-answer="b">
+          <p>1. What are the three main parts inside a CPU?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q6" value="a"> a) RAM, SSD, HDD</label>
+            <label><input type="radio" name="m2q6" value="b"> b) ALU, Control Unit, Registers</label>
+            <label><input type="radio" name="m2q6" value="c"> c) Monitor, Keyboard, Mouse</label>
+            <label><input type="radio" name="m2q6" value="d"> d) Windows, macOS, Linux</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="c">
-        <p>3. What is the correct order of the CPU cycle?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q8" value="a"> a) Decode → Fetch → Execute</label>
-          <label><input type="radio" name="m2q8" value="b"> b) Execute → Decode → Fetch</label>
-          <label><input type="radio" name="m2q8" value="c"> c) Fetch → Decode → Execute</label>
-          <label><input type="radio" name="m2q8" value="d"> d) Fetch → Execute → Decode</label>
+        <div class="question" data-answer="a">
+          <p>2. What is the key difference between RAM and storage?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q7" value="a"> a) RAM is temporary; storage is permanent</label>
+            <label><input type="radio" name="m2q7" value="b"> b) RAM is slower than storage</label>
+            <label><input type="radio" name="m2q7" value="c"> c) Storage is inside the CPU</label>
+            <label><input type="radio" name="m2q7" value="d"> d) RAM keeps data when power is off</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="d">
-        <p>4. Which is an example of system software?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q9" value="a"> a) Microsoft Word</label>
-          <label><input type="radio" name="m2q9" value="b"> b) Google Chrome</label>
-          <label><input type="radio" name="m2q9" value="c"> c) Minecraft</label>
-          <label><input type="radio" name="m2q9" value="d"> d) Windows operating system</label>
+        <div class="question" data-answer="c">
+          <p>3. What is the correct order of the CPU cycle?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q8" value="a"> a) Decode → Fetch → Execute</label>
+            <label><input type="radio" name="m2q8" value="b"> b) Execute → Decode → Fetch</label>
+            <label><input type="radio" name="m2q8" value="c"> c) Fetch → Decode → Execute</label>
+            <label><input type="radio" name="m2q8" value="d"> d) Fetch → Execute → Decode</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="b">
-        <p>5. What is the difference between data and information?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q10" value="a"> a) Data is processed; information is raw</label>
-          <label><input type="radio" name="m2q10" value="b"> b) Data is raw input; information is processed with meaning</label>
-          <label><input type="radio" name="m2q10" value="c"> c) They are the same</label>
-          <label><input type="radio" name="m2q10" value="d"> d) Data is only numbers; information is only text</label>
+        <div class="question" data-answer="d">
+          <p>4. Which is an example of system software?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q9" value="a"> a) Microsoft Word</label>
+            <label><input type="radio" name="m2q9" value="b"> b) Google Chrome</label>
+            <label><input type="radio" name="m2q9" value="c"> c) Minecraft</label>
+            <label><input type="radio" name="m2q9" value="d"> d) Windows operating system</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
+
+        <div class="question" data-answer="b">
+          <p>5. What is the difference between data and information?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q10" value="a"> a) Data is processed; information is raw</label>
+            <label><input type="radio" name="m2q10" value="b"> b) Data is raw input; information is processed with
+              meaning</label>
+            <label><input type="radio" name="m2q10" value="c"> c) They are the same</label>
+            <label><input type="radio" name="m2q10" value="d"> d) Data is only numbers; information is only text</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="score-box">Score: <span id="scoreM2T2">0</span> / 5</div>
       </div>
 
-      <div class="score-box">Score: <span id="scoreM2T2">0</span> / 5</div>
-    </div>
+      <!-- ============================================================ -->
+      <h2>Topic 3: Number Systems</h2>
 
-    <!-- ============================================================ -->
-    <h2>Topic 3: Number Systems</h2>
+      <p>Computers represent all information using combinations of <strong>0</strong> and <strong>1</strong> (Binary).
+        But humans use <strong>10 digits</strong> (Decimal). To work with computers, we need to convert between
+        different number systems. The <strong>base</strong> tells you how many symbols are available.</p>
 
-    <p>Computers represent all information using combinations of 0 and 1 (Binary). The base determines how many symbols are available.</p>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>System</th>
+              <th>Base</th>
+              <th>Digits</th>
+              <th>Used by</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Decimal</td>
+              <td>10</td>
+              <td>0 - 9</td>
+              <td>Humans</td>
+            </tr>
+            <tr>
+              <td>Binary</td>
+              <td>2</td>
+              <td>0 - 1</td>
+              <td>Computers</td>
+            </tr>
+            <tr>
+              <td>Octal</td>
+              <td>8</td>
+              <td>0 - 7</td>
+              <td>Short binary (groups of 3)</td>
+            </tr>
+            <tr>
+              <td>Hexadecimal</td>
+              <td>16</td>
+              <td>0 - 9, A - F</td>
+              <td>Short binary (groups of 4)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <div class="table-wrap">
-      <table>
-        <thead><tr><th>System</th><th>Base</th><th>Digits</th></tr></thead>
-        <tbody>
-          <tr><td>Decimal</td><td>10</td><td>0 - 9</td></tr>
-          <tr><td>Binary</td><td>2</td><td>0 - 1</td></tr>
-          <tr><td>Octal</td><td>8</td><td>0 - 7</td></tr>
-          <tr><td>Hexadecimal</td><td>16</td><td>0 - 9, A - F</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <div class="note">The subscript tells you the base. Example: <strong>1011₂</strong> means "1011 in base 2"
+        (binary). <strong>57₈</strong> means "57 in base 8" (octal). No subscript usually means decimal.</div>
 
-    <h3>Decimal: Base 10</h3>
-    <div class="example-box">543 = 5×10² + 4×10¹ + 3×10⁰ = 500 + 40 + 3</div>
+      <!-- ============================================================ -->
+      <h3>Decimal: Base 10</h3>
 
-    <h3>Binary: Base 2</h3>
-    <p>Place values: 128, 64, 32, 16, 8, 4, 2, 1</p>
-    <div class="example-box">1011₂ = 1×8 + 0×4 + 1×2 + 1×1 = 8 + 0 + 2 + 1 = 11₁₀</div>
+      <p>Our everyday number system is called <strong>base 10</strong> because it uses exactly ten unique digits:
+        <strong>0, 1, 2, 3, 4, 5, 6, 7, 8, 9</strong>.</p>
 
-    <h3>Decimal to Binary: Repeated Division by 2</h3>
-    <div class="example-box">
-      Convert 13:<br>
-      13 ÷ 2 = 6 r 1<br>
-      6 ÷ 2 = 3 r 0<br>
-      3 ÷ 2 = 1 r 1<br>
-      1 ÷ 2 = 0 r 1<br>
-      Read remainders bottom to top: <strong>1101₂</strong>
-    </div>
+      <p>Each position in a decimal number represents a <strong>power of 10</strong>. This is called <strong>place
+          value</strong>.</p>
 
-    <h3>Binary Addition</h3>
-    <ul>
-      <li>0 + 0 = 0</li>
-      <li>0 + 1 = 1</li>
-      <li>1 + 0 = 1</li>
-      <li>1 + 1 = 10 (write 0, carry 1)</li>
-    </ul>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>10²</th>
+              <th>10¹</th>
+              <th>10⁰</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Value</td>
+              <td>100</td>
+              <td>10</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>Example (543)</td>
+              <td>5</td>
+              <td>4</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Contribution</td>
+              <td>5 × 100 = 500</td>
+              <td>4 × 10 = 40</td>
+              <td>3 × 1 = 3</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-    <h3>Why Hexadecimal?</h3>
-    <p>Binary gets long and unreadable. Hexadecimal is a shorter representation.</p>
-    <div class="example-box">1111 1010₂ = FA₁₆</div>
+      <div class="example-box">
+        <strong>543</strong> = 5×10² + 4×10¹ + 3×10⁰<br>
+        = 5×100 + 4×10 + 3×1<br>
+        = 500 + 40 + 3<br>
+        = <strong>543</strong> ✅
+      </div>
 
-    <h3>Octal: Base 8</h3>
-    <div class="example-box">Convert 101 111: Group by threes → 101 | 111 → 5 | 7 → <strong>57₈</strong></div>
+      <div class="note">If it's already decimal, the number is unchanged. This is just showing you how place value works
+        — and it works the same way for binary, octal, and hex — just with different bases.</div>
 
-    <h3>IP Addresses</h3>
-    <ul>
-      <li><strong>32 bits total</strong></li>
-      <li><strong>4 octets</strong></li>
-      <li><strong>8 bits each</strong></li>
-      <li><strong>0-255</strong> per octet</li>
-    </ul>
-    <div class="example-box">192.168.1.10 → 4 octets of 8 bits each = 32 bits total. Min 00000000 = 0, Max 11111111 = 255.</div>
+      <!-- ============================================================ -->
+      <h3>Binary: Base 2</h3>
 
-    <!-- QUIZ M2T3num -->
-    <div class="quiz-section">
+      <p>Binary uses only two digits: <strong>0</strong> and <strong>1</strong>. Each position represents a
+        <strong>power of 2</strong>.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Position</th>
+              <th>2⁷</th>
+              <th>2⁶</th>
+              <th>2⁵</th>
+              <th>2⁴</th>
+              <th>2³</th>
+              <th>2²</th>
+              <th>2¹</th>
+              <th>2⁰</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Value</td>
+              <td>128</td>
+              <td>64</td>
+              <td>32</td>
+              <td>16</td>
+              <td>8</td>
+              <td>4</td>
+              <td>2</td>
+              <td>1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h4>How to read a binary number</h4>
+      <p>Multiply each digit by its place value, then add all the results together.</p>
+
+      <div class="example-box">
+        <strong>1011₂</strong> — let's read it from right to left:<br><br>
+        <table style="margin: 8px 0;">
+          <tr>
+            <th>Digit</th>
+            <th>Place Value</th>
+            <th>Multiply</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1 × 1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>1 × 2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>0</td>
+            <td>4</td>
+            <td>0 × 4</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>8</td>
+            <td>1 × 8</td>
+            <td>8</td>
+          </tr>
+        </table>
+        Add them all: 8 + 0 + 2 + 1 = <strong>11₁₀</strong> ✅
+      </div>
+
+      <h4>Practice — Binary to Decimal</h4>
+      <p>Try converting this yourself. Type your decimal answer in the box and check.</p>
+
+      <div class="question" data-answer="13" data-type="input">
+        <p>Convert <strong>1101₂</strong> to decimal.</p>
+        <input type="text" class="answer-input" placeholder="Type your answer here" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 1101₂ = (1×8) + (1×4) + (0×2) + (1×1)</div>
+      </div>
+
+      <div class="question" data-answer="10" data-type="input">
+        <p>Convert <strong>1010₂</strong> to decimal.</p>
+        <input type="text" class="answer-input" placeholder="Type your answer here" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 1010₂ = (1×8) + (0×4) + (1×2) + (0×1)</div>
+      </div>
+
+      <!-- ============================================================ -->
+      <h3>Decimal to Binary: Repeated Division by 2</h3>
+
+      <p>To convert a decimal number to binary, keep dividing by 2 and record the <strong>remainders</strong>. Then read
+        the remainders <strong>from bottom to top</strong>.</p>
+
+      <div class="example-box">
+        <strong>Convert 13 to binary:</strong><br><br>
+        <table style="margin: 8px 0;">
+          <tr>
+            <th>Step</th>
+            <th>Division</th>
+            <th>Quotient</th>
+            <th>Remainder</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>13 ÷ 2</td>
+            <td>6</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>6 ÷ 2</td>
+            <td>3</td>
+            <td>0</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3 ÷ 2</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>1 ÷ 2</td>
+            <td>0</td>
+            <td>1</td>
+          </tr>
+        </table>
+        Stop when the quotient is 0.<br>
+        Read remainders from <strong>bottom to top</strong>: 1, 1, 0, 1<br>
+        Answer: <strong>1101₂</strong> ✅
+      </div>
+
+      <div class="note">Why bottom to top? Because each division gives you the next digit from the <strong>least
+          significant</strong> (rightmost) position. So the last remainder is the leftmost digit.</div>
+
+      <h4>Practice — Decimal to Binary</h4>
+
+      <div class="question" data-answer="1010" data-type="input">
+        <p>Convert <strong>10</strong> to binary.</p>
+        <input type="text" class="answer-input" placeholder="Type your binary answer (e.g., 1010)" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 10 = 8 + 2. Which positions get a 1?</div>
+      </div>
+
+      <div class="question" data-answer="11001" data-type="input">
+        <p>Convert <strong>25</strong> to binary.</p>
+        <input type="text" class="answer-input" placeholder="Type your binary answer" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 25 = 16 + 8 + 1. Or use repeated division by 2.</div>
+      </div>
+
+      <!-- ============================================================ -->
+      <h3>Binary Addition</h3>
+
+      <p>Binary addition has only <strong>four rules</strong>:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Rule</th>
+              <th>Result</th>
+              <th>Explanation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0 + 0</td>
+              <td><strong>0</strong></td>
+              <td>Nothing to add</td>
+            </tr>
+            <tr>
+              <td>0 + 1</td>
+              <td><strong>1</strong></td>
+              <td>Just like decimal</td>
+            </tr>
+            <tr>
+              <td>1 + 0</td>
+              <td><strong>1</strong></td>
+              <td>Just like decimal</td>
+            </tr>
+            <tr>
+              <td>1 + 1</td>
+              <td><strong>10</strong></td>
+              <td>Write 0, carry 1 (because 2 = 10 in binary)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="warning">⚠️ In binary, <strong>1 + 1 = 10</strong>, read as "one-zero" — NOT "ten". Because binary
+        only has 0 and 1, we carry to the next place value.</div>
+
+      <h4>Worked Example: 1011 + 0110</h4>
+
+      <div class="example-box">
+        <pre
+          style="margin: 0; background: transparent; border: none; padding: 0; color: inherit; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.8;">   1 1 1      ← carries
+     1 0 1 1
+   + 0 1 1 0
+   ─────────
+   1 0 0 0 1</pre>
+        <br>
+        Let's trace it from right to left:<br>
+        <ul style="margin-top: 8px;">
+          <li><strong>Position 1 (rightmost):</strong> 1 + 0 = 1. Write <strong>1</strong>.</li>
+          <li><strong>Position 2:</strong> 1 + 1 = 10. Write <strong>0</strong>, carry <strong>1</strong>.</li>
+          <li><strong>Position 3:</strong> 0 + 1 + carry 1 = 10. Write <strong>0</strong>, carry <strong>1</strong>.
+          </li>
+          <li><strong>Position 4:</strong> 1 + 0 + carry 1 = 10. Write <strong>0</strong>, carry <strong>1</strong>.
+          </li>
+          <li><strong>Position 5:</strong> carry 1. Write <strong>1</strong>.</li>
+        </ul>
+        Result: <strong>10001₂</strong> ✅
+      </div>
+
+      <h4>Practice — Binary Addition</h4>
+
+      <div class="question" data-answer="110" data-type="input">
+        <p>Add: <strong>011 + 011</strong></p>
+        <input type="text" class="answer-input" placeholder="Type your binary answer" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: Right to left. 1+1 = 10 (write 0, carry 1). Then 1+1+1 = 11 (write 1, carry 1). Then
+          0+0+1 = 1.</div>
+      </div>
+
+      <div class="question" data-answer="1010" data-type="input">
+        <p>Add: <strong>101 + 101</strong></p>
+        <input type="text" class="answer-input" placeholder="Type your binary answer" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 101₂ = 5 decimal. 5 + 5 = 10 decimal. What is 10 in binary?</div>
+      </div>
+
+      <!-- ============================================================ -->
+      <h3>Hexadecimal: Base 16</h3>
+
+      <p>Binary numbers get long and hard to read. Hexadecimal is a <strong>shorter representation</strong> — each hex
+        digit represents exactly <strong>4 binary digits</strong>.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Decimal</th>
+              <th>Hex</th>
+              <th>Binary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>0 - 9</td>
+              <td>0 - 9</td>
+              <td>0000 - 1001</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td>A</td>
+              <td>1010</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td>B</td>
+              <td>1011</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td>C</td>
+              <td>1100</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td>D</td>
+              <td>1101</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td>E</td>
+              <td>1110</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td>F</td>
+              <td>1111</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="example-box">
+        <strong>Convert 1111 1010₂ to hexadecimal:</strong><br><br>
+        Group into <strong>fours</strong> (from right to left):<br>
+        <code>1111</code> | <code>1010</code><br><br>
+        Convert each group:<br>
+        <code>1111</code> = 15 = <strong>F</strong><br>
+        <code>1010</code> = 10 = <strong>A</strong><br><br>
+        Answer: <strong>FA₁₆</strong> ✅
+      </div>
+
+      <h4>Practice — Binary to Hexadecimal</h4>
+
+      <div class="question" data-answer="f0" data-type="input">
+        <p>Convert <strong>1111 0000₂</strong> to hexadecimal.</p>
+        <input type="text" class="answer-input" placeholder="Type your hex answer (letters ok)" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 1111 = 15 = F. 0000 = 0. So the answer is F followed by 0.</div>
+      </div>
+
+      <!-- ============================================================ -->
+      <h3>Octal: Base 8</h3>
+
+      <p>Octal uses digits <strong>0-7</strong>. Each octal digit represents exactly <strong>3 binary digits</strong>.
+      </p>
+
+      <div class="example-box">
+        <strong>Convert 101 111₂ to octal:</strong><br><br>
+        Group into <strong>threes</strong> (from right to left):<br>
+        <code>101</code> | <code>111</code><br><br>
+        Convert each group:<br>
+        <code>101</code> = 5<br>
+        <code>111</code> = 7<br><br>
+        Answer: <strong>57₈</strong> ✅
+      </div>
+
+      <h4>Practice — Binary to Octal</h4>
+
+      <div class="question" data-answer="27" data-type="input">
+        <p>Convert <strong>010 111₂</strong> to octal.</p>
+        <input type="text" class="answer-input" placeholder="Type your octal answer" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 010 = 2. 111 = 7.</div>
+      </div>
+
+      <!-- ============================================================ -->
+      <h3>IP Addresses</h3>
+
+      <p>An Internet Protocol (IP) address identifies a device on a network. IPv4 addresses look like this:</p>
+
+      <div class="example-box">
+        <strong>192.168.1.10</strong><br><br>
+        It has <strong>4 octets</strong>: 192 . 168 . 1 . 10<br>
+        Each octet is <strong>8 bits</strong> → 4 × 8 = <strong>32 bits total</strong>.<br>
+        Each octet ranges from <strong>0 to 255</strong> in decimal.
+      </div>
+
+      <h4>Why 0 to 255?</h4>
+
+      <p>One octet = 8 bits. The smallest 8-bit binary number is <code>00000000</code> = <strong>0</strong>. The largest
+        is <code>11111111</code> = <strong>255</strong>.</p>
+
+      <div class="example-box">
+        Minimum: 00000000 = 0<br>
+        Maximum: 11111111 = 255<br>
+        So each IPv4 octet ranges from <strong>0 to 255</strong>. ✅
+      </div>
+
+      <h4>Practice — IP Address</h4>
+
+      <div class="question" data-answer="32" data-type="input">
+        <p>How many bits are in an IPv4 address total?</p>
+        <input type="text" class="answer-input" placeholder="Type a number" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 4 octets × 8 bits each.</div>
+      </div>
+
+      <div class="question" data-answer="255" data-type="input">
+        <p>What is the maximum decimal value of one octet?</p>
+        <input type="text" class="answer-input" placeholder="Type a number" autocomplete="off">
+        <button class="check-btn" onclick="checkTextAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+        <div class="hint">💡 Hint: 11111111 in binary = ? in decimal.</div>
+      </div>
+
+      <!-- ============================================================ -->
+      <h3>Quick Reference Summary</h3>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Conversion</th>
+              <th>Method</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Binary → Decimal</td>
+              <td>Multiply each digit by its place value, then add</td>
+            </tr>
+            <tr>
+              <td>Decimal → Binary</td>
+              <td>Repeated division by 2, read remainders bottom to top</td>
+            </tr>
+            <tr>
+              <td>Binary → Hex</td>
+              <td>Group into 4s from right, convert each group</td>
+            </tr>
+            <tr>
+              <td>Binary → Octal</td>
+              <td>Group into 3s from right, convert each group</td>
+            </tr>
+            <tr>
+              <td>Binary Addition</td>
+              <td>0+0=0, 0+1=1, 1+0=1, 1+1=10 (carry 1)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="note">The more you practice, the faster these conversions become. Try the practice boxes above
+        multiple times — they don't track score, they just help you learn.</div>
+
+      <!-- ============================================================ -->
       <h3>Quiz - Number Systems</h3>
 
-      <div class="question" data-answer="c">
-        <p>1. What is the decimal equivalent of 1010₂?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q11" value="a"> a) 8</label>
-          <label><input type="radio" name="m2q11" value="b"> b) 12</label>
-          <label><input type="radio" name="m2q11" value="c"> c) 10</label>
-          <label><input type="radio" name="m2q11" value="d"> d) 14</label>
+      <div class="quiz-section">
+        <h3>Multiple Choice</h3>
+
+        <div class="question" data-answer="c">
+          <p>1. What is the decimal equivalent of 1010₂?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q11" value="a"> a) 8</label>
+            <label><input type="radio" name="m2q11" value="b"> b) 12</label>
+            <label><input type="radio" name="m2q11" value="c"> c) 10</label>
+            <label><input type="radio" name="m2q11" value="d"> d) 14</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="b">
-        <p>2. What is the binary equivalent of 25₁₀?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q12" value="a"> a) 11000₂</label>
-          <label><input type="radio" name="m2q12" value="b"> b) 11001₂</label>
-          <label><input type="radio" name="m2q12" value="c"> c) 10101₂</label>
-          <label><input type="radio" name="m2q12" value="d"> d) 11100₂</label>
+        <div class="question" data-answer="b">
+          <p>2. What is the binary equivalent of 25₁₀?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q12" value="a"> a) 11000₂</label>
+            <label><input type="radio" name="m2q12" value="b"> b) 11001₂</label>
+            <label><input type="radio" name="m2q12" value="c"> c) 10101₂</label>
+            <label><input type="radio" name="m2q12" value="d"> d) 11100₂</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="a">
-        <p>3. In binary addition, what is 1 + 1?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q13" value="a"> a) 10</label>
-          <label><input type="radio" name="m2q13" value="b"> b) 2</label>
-          <label><input type="radio" name="m2q13" value="c"> c) 11</label>
-          <label><input type="radio" name="m2q13" value="d"> d) 0</label>
+        <div class="question" data-answer="a">
+          <p>3. In binary addition, what is 1 + 1?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q13" value="a"> a) 10</label>
+            <label><input type="radio" name="m2q13" value="b"> b) 2</label>
+            <label><input type="radio" name="m2q13" value="c"> c) 11</label>
+            <label><input type="radio" name="m2q13" value="d"> d) 0</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="d">
-        <p>4. What is the hexadecimal equivalent of 1111 0000₂?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q14" value="a"> a) 0F</label>
-          <label><input type="radio" name="m2q14" value="b"> b) FF</label>
-          <label><input type="radio" name="m2q14" value="c"> c) E0</label>
-          <label><input type="radio" name="m2q14" value="d"> d) F0</label>
+        <div class="question" data-answer="d">
+          <p>4. What is the hexadecimal equivalent of 1111 0000₂?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q14" value="a"> a) 0F</label>
+            <label><input type="radio" name="m2q14" value="b"> b) FF</label>
+            <label><input type="radio" name="m2q14" value="c"> c) E0</label>
+            <label><input type="radio" name="m2q14" value="d"> d) F0</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
 
-      <div class="question" data-answer="b">
-        <p>5. Why does each IPv4 octet range from 0 to 255?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q15" value="a"> a) Because there are 4 octets</label>
-          <label><input type="radio" name="m2q15" value="b"> b) Because each octet is 8 bits, and 11111111 = 255</label>
-          <label><input type="radio" name="m2q15" value="c"> c) Because IP addresses are in hexadecimal</label>
-          <label><input type="radio" name="m2q15" value="d"> d) Because 255 is prime</label>
+        <div class="question" data-answer="b">
+          <p>5. Why does each IPv4 octet range from 0 to 255?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q15" value="a"> a) Because there are 4 octets</label>
+            <label><input type="radio" name="m2q15" value="b"> b) Because each octet is 8 bits, and 11111111 =
+              255</label>
+            <label><input type="radio" name="m2q15" value="c"> c) Because IP addresses are in hexadecimal</label>
+            <label><input type="radio" name="m2q15" value="d"> d) Because 255 is prime</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
+
+        <div class="score-box">Score: <span id="scoreM2T3num">0</span> / 5</div>
       </div>
+      <!-- ============================================================ -->
+      <h2>Topic 4: Development of User Interaction</h2>
 
-      <div class="score-box">Score: <span id="scoreM2T3num">0</span> / 5</div>
-    </div>
+      <p><strong>User Interaction (UI)</strong> is the way humans communicate with and control a computer system —
+        keyboard, mouse, touchscreen, voice, gestures.</p>
+      <div class="note">Human → Interface → Computer</div>
 
-    <!-- ============================================================ -->
-    <h2>Topic 4: Development of User Interaction</h2>
+      <h3>Early Computers: Punch Cards</h3>
+      <p>Instructions and data through physical holes punched into paper cards.</p>
+      <p><strong>Advantages:</strong> Reliable physical storage, automatic processing.</p>
+      <p><strong>Limitations:</strong> Difficult to modify, slow preparation, no immediate feedback.</p>
 
-    <p><strong>User Interaction (UI)</strong> is the way humans communicate with and control a computer system — keyboard, mouse, touchscreen, voice, gestures.</p>
-    <div class="note">Human → Interface → Computer</div>
-
-    <h3>Early Computers: Punch Cards</h3>
-    <p>Instructions and data through physical holes punched into paper cards.</p>
-    <p><strong>Advantages:</strong> Reliable physical storage, automatic processing.</p>
-    <p><strong>Limitations:</strong> Difficult to modify, slow preparation, no immediate feedback.</p>
-
-    <h3>CLI - Command Line Interface</h3>
-    <p>Users type specific text commands.</p>
-    <pre><code>C:\> dir
+      <h3>CLI - Command Line Interface</h3>
+      <p>Users type specific text commands.</p>
+      <pre><code>C:\> dir
 C:\> cd Documents
 C:\> mkdir IT111</code></pre>
-    <p><strong>Advantages:</strong> Powerful and precise control. <strong>Challenge:</strong> Must memorize syntax.</p>
+      <p><strong>Advantages:</strong> Powerful and precise control. <strong>Challenge:</strong> Must memorize syntax.
+      </p>
 
-    <h3>GUI - Graphical User Interface</h3>
-    <p>Visual elements: click, open, delete, save. Examples: Windows, macOS, Linux desktop environments.</p>
-    <div class="example-box">To delete a file in CLI: <code>del filename.txt</code>. In GUI: right-click the file and select "Delete".</div>
+      <h3>GUI - Graphical User Interface</h3>
+      <p>Visual elements: click, open, delete, save. Examples: Windows, macOS, Linux desktop environments.</p>
+      <div class="example-box">To delete a file in CLI: <code>del filename.txt</code>. In GUI: right-click the file and
+        select "Delete".</div>
 
-    <h3>Touchscreens</h3>
-    <p>Direct physical interaction: finger + screen. Smartphones, tablets, kiosks, ATMs.</p>
+      <h3>Touchscreens</h3>
+      <p>Direct physical interaction: finger + screen. Smartphones, tablets, kiosks, ATMs.</p>
 
-    <h3>Voice Interfaces</h3>
-    <p>Speech interaction: Siri, Alexa, speech-to-text, voice search.</p>
+      <h3>Voice Interfaces</h3>
+      <p>Speech interaction: Siri, Alexa, speech-to-text, voice search.</p>
 
-    <h3>Good Interfaces Should Be</h3>
-    <ul>
-      <li><strong>Easy to learn</strong> - intuitive for beginners</li>
-      <li><strong>Efficient</strong> - fast for experts</li>
-      <li><strong>Accessible</strong> - usable by people with disabilities</li>
-      <li><strong>Understandable</strong> - clear labels and feedback</li>
-      <li><strong>Responsive</strong> - reacts quickly</li>
-      <li><strong>Safe</strong> - prevents critical errors</li>
-    </ul>
+      <h3>Good Interfaces Should Be</h3>
+      <ul>
+        <li><strong>Easy to learn</strong> - intuitive for beginners</li>
+        <li><strong>Efficient</strong> - fast for experts</li>
+        <li><strong>Accessible</strong> - usable by people with disabilities</li>
+        <li><strong>Understandable</strong> - clear labels and feedback</li>
+        <li><strong>Responsive</strong> - reacts quickly</li>
+        <li><strong>Safe</strong> - prevents critical errors</li>
+      </ul>
 
-    <!-- QUIZ M2T3ui -->
-    <div class="quiz-section">
-      <h3>Quiz - User Interaction</h3>
+      <!-- QUIZ M2T3ui -->
+      <div class="quiz-section">
+        <h3>Quiz - User Interaction</h3>
 
-      <div class="question" data-answer="b">
-        <p>1. What was the main limitation of punch cards?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q16" value="a"> a) Too small to read</label>
-          <label><input type="radio" name="m2q16" value="b"> b) Difficult to modify and no immediate feedback</label>
-          <label><input type="radio" name="m2q16" value="c"> c) Could only store numbers</label>
-          <label><input type="radio" name="m2q16" value="d"> d) Required internet</label>
+        <div class="question" data-answer="b">
+          <p>1. What was the main limitation of punch cards?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q16" value="a"> a) Too small to read</label>
+            <label><input type="radio" name="m2q16" value="b"> b) Difficult to modify and no immediate feedback</label>
+            <label><input type="radio" name="m2q16" value="c"> c) Could only store numbers</label>
+            <label><input type="radio" name="m2q16" value="d"> d) Required internet</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
         </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
+
+        <div class="question" data-answer="c">
+          <p>2. What is the main advantage of a CLI over a GUI?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q17" value="a"> a) It looks better</label>
+            <label><input type="radio" name="m2q17" value="b"> b) Easier for beginners</label>
+            <label><input type="radio" name="m2q17" value="c"> c) Powerful and precise control</label>
+            <label><input type="radio" name="m2q17" value="d"> d) No keyboard needed</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="question" data-answer="a">
+          <p>3. What did the GUI change about computing?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q18" value="a"> a) Made computers easier for ordinary people to
+              use</label>
+            <label><input type="radio" name="m2q18" value="b"> b) Eliminated software</label>
+            <label><input type="radio" name="m2q18" value="c"> c) Made computers slower</label>
+            <label><input type="radio" name="m2q18" value="d"> d) Removed the CPU</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="question" data-answer="d">
+          <p>4. What interaction method allows you to simply say "Call Mom"?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q19" value="a"> a) Punch cards</label>
+            <label><input type="radio" name="m2q19" value="b"> b) CLI</label>
+            <label><input type="radio" name="m2q19" value="c"> c) GUI</label>
+            <label><input type="radio" name="m2q19" value="d"> d) Voice interface</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="question" data-answer="b">
+          <p>5. Why does user interaction matter?</p>
+          <div class="options">
+            <label><input type="radio" name="m2q20" value="a"> a) Because computers are cheap</label>
+            <label><input type="radio" name="m2q20" value="b"> b) A powerful computer is useless if people can't use it
+              effectively</label>
+            <label><input type="radio" name="m2q20" value="c"> c) It makes hardware faster</label>
+            <label><input type="radio" name="m2q20" value="d"> d) Reduces electricity</label>
+          </div>
+          <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+          <div class="feedback"></div>
+        </div>
+
+        <div class="score-box">Score: <span id="scoreM2T3ui">0</span> / 5</div>
       </div>
 
-      <div class="question" data-answer="c">
-        <p>2. What is the main advantage of a CLI over a GUI?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q17" value="a"> a) It looks better</label>
-          <label><input type="radio" name="m2q17" value="b"> b) Easier for beginners</label>
-          <label><input type="radio" name="m2q17" value="c"> c) Powerful and precise control</label>
-          <label><input type="radio" name="m2q17" value="d"> d) No keyboard needed</label>
-        </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
+    </main>
+  </div>
 
-      <div class="question" data-answer="a">
-        <p>3. What did the GUI change about computing?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q18" value="a"> a) Made computers easier for ordinary people to use</label>
-          <label><input type="radio" name="m2q18" value="b"> b) Eliminated software</label>
-          <label><input type="radio" name="m2q18" value="c"> c) Made computers slower</label>
-          <label><input type="radio" name="m2q18" value="d"> d) Removed the CPU</label>
-        </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
+  <button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
-      <div class="question" data-answer="d">
-        <p>4. What interaction method allows you to simply say "Call Mom"?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q19" value="a"> a) Punch cards</label>
-          <label><input type="radio" name="m2q19" value="b"> b) CLI</label>
-          <label><input type="radio" name="m2q19" value="c"> c) GUI</label>
-          <label><input type="radio" name="m2q19" value="d"> d) Voice interface</label>
-        </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
+  <script>
+    function checkTextAnswer(btn) {
+      const q = btn.closest('.question');
+      const ans = q.dataset.answer.toLowerCase().trim();
+      const input = q.querySelector('.answer-input');
+      const fb = q.querySelector('.feedback');
+      const userAns = input.value.toLowerCase().trim();
 
-      <div class="question" data-answer="b">
-        <p>5. Why does user interaction matter?</p>
-        <div class="options">
-          <label><input type="radio" name="m2q20" value="a"> a) Because computers are cheap</label>
-          <label><input type="radio" name="m2q20" value="b"> b) A powerful computer is useless if people can't use it effectively</label>
-          <label><input type="radio" name="m2q20" value="c"> c) It makes hardware faster</label>
-          <label><input type="radio" name="m2q20" value="d"> d) Reduces electricity</label>
-        </div>
-        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
-        <div class="feedback"></div>
-      </div>
-
-      <div class="score-box">Score: <span id="scoreM2T3ui">0</span> / 5</div>
-    </div>
-
-  </main>
-</div>
-
-<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
-<script>
-  function checkAnswer(btn) {
-    const q = btn.closest('.question');
-    const ans = q.dataset.answer;
-    const sel = q.querySelector('input[type="radio"]:checked');
-    const fb = q.querySelector('.feedback');
-    if (!sel) { fb.textContent = 'Pick an answer before checking.'; fb.className = 'feedback wrong show'; return; }
-    if (sel.value === ans) { fb.textContent = '✓ Correct!'; fb.className = 'feedback correct show'; }
-    else { fb.textContent = '✗ Wrong. Try again!'; fb.className = 'feedback wrong show'; }
-    updateScores();
-  }
-
-  function updateScores() {
-    const all = document.querySelectorAll('.question');
-    const ranges = [
-      { id: 'scoreM2T1', start: 0, end: 5 },
-      { id: 'scoreM2T2', start: 5, end: 10 },
-      { id: 'scoreM2T3num', start: 10, end: 15 },
-      { id: 'scoreM2T3ui', start: 15, end: 20 }
-    ];
-    ranges.forEach(r => {
-      let s = 0;
-      for (let i = r.start; i < r.end && i < all.length; i++) {
-        const q = all[i];
-        const sel = q.querySelector('input[type="radio"]:checked');
-        if (sel && sel.value === q.dataset.answer) s++;
+      if (!userAns) {
+        fb.textContent = 'Type your answer first.';
+        fb.className = 'feedback wrong show';
+        return;
       }
-      const el = document.getElementById(r.id);
-      if (el) el.textContent = s;
-    });
-  }
 
-  window.addEventListener('scroll', () => {
-    const btn = document.getElementById('topBtn');
-    btn.classList.toggle('show', window.scrollY > 400);
-    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-    document.getElementById('scrollProgress').style.width = p + '%';
-  });
-</script>
+      const normalize = (s) => s.replace(/\s+/g, '').replace(/^0+/, '').toLowerCase();
+      const normalizedUser = normalize(userAns);
+      const normalizedAns = normalize(ans);
+
+      if (normalizedUser === normalizedAns || userAns === ans) {
+        fb.textContent = '✓ Correct!';
+        fb.className = 'feedback correct show';
+        input.style.borderColor = 'var(--accent-success)';
+      } else {
+        fb.textContent = '✗ Sayop. Try again! Check the hint below.';
+        fb.className = 'feedback wrong show';
+        input.style.borderColor = 'var(--accent-danger)';
+        q.classList.add('wrong-shown');
+      }
+
+      updateScores();
+    }
+
+    function updateScores() {
+      const all = document.querySelectorAll('.question');
+      const ranges = [
+        { id: 'scoreM2T1', start: 0, end: 5 },
+        { id: 'scoreM2T2', start: 5, end: 10 },
+        { id: 'scoreM2T3num', start: 10, end: 15 },
+        { id: 'scoreM2T3ui', start: 15, end: 20 }
+      ];
+      ranges.forEach(r => {
+        let s = 0;
+        for (let i = r.start; i < r.end && i < all.length; i++) {
+          const q = all[i];
+          const sel = q.querySelector('input[type="radio"]:checked');
+          if (sel && sel.value === q.dataset.answer) s++;
+        }
+        const el = document.getElementById(r.id);
+        if (el) el.textContent = s;
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('topBtn');
+      btn.classList.toggle('show', window.scrollY > 400);
+      const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      document.getElementById('scrollProgress').style.width = p + '%';
+    });
+  </script>
 
 </body>
+
 </html>
