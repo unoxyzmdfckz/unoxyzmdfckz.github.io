@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module 3 – Networks & Cybersecurity</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<div class="layout">
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-logo">IT</div>
+      <div class="brand-text">
+        <h1>IT111 Notes</h1>
+        <p>Module 3</p>
+      </div>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="index.html">Home</a>
+      <a href="module1.html">History of Computing</a>
+      <a href="module2.html">Computer Systems</a>
+      <a href="module3.html" class="active">Networks &amp; Security</a>
+    </nav>
+  </aside>
+
+  <main class="content">
+    <div class="page-hero">
+      <span class="badge">Module 3</span>
+      <h1>Networks &amp; Cybersecurity</h1>
+      <p>How devices connect, how the Internet works, and how we protect it all.</p>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 1: Introduction to Computer Networks</h2>
+
+    <p>A <strong>computer network</strong> is a group of two or more devices connected together so they can communicate, share data, share resources, and access services.</p>
+    <div class="example-box">Laptop ↔ Router ↔ Internet ↔ Server</div>
+
+    <h3>Why Do We Need Networks?</h3>
+    <ul>
+      <li><strong>Communication</strong> – messages, emails, video calls</li>
+      <li><strong>Information Access</strong> – websites, databases, cloud services</li>
+      <li><strong>Resource Sharing</strong> – printers, files, internet connections</li>
+      <li><strong>Collaboration &amp; Management</strong> – managing users, devices, data</li>
+    </ul>
+
+    <h3>Types of Networks</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Coverage</th><th>Example</th></tr></thead>
+        <tbody>
+          <tr><td>PAN (Personal)</td><td>Personal area</td><td>Phone + smartwatch</td></tr>
+          <tr><td>LAN (Local)</td><td>Small/local area</td><td>Computer laboratory</td></tr>
+          <tr><td>MAN (Metropolitan)</td><td>City-wide area</td><td>City government network</td></tr>
+          <tr><td>WAN (Wide)</td><td>Large geographic</td><td>The Internet</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Network Topology</h3>
+    <p>Describes the physical or logical arrangement of devices: Bus, Star, Ring, Mesh.</p>
+
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Topology</th><th>Main Advantage</th><th>Main Disadvantage</th></tr></thead>
+        <tbody>
+          <tr><td>Bus</td><td>Low cost</td><td>Main cable failure kills network</td></tr>
+          <tr><td>Star</td><td>Easy management</td><td>Central device dependency</td></tr>
+          <tr><td>Ring</td><td>Organized structure</td><td>Difficult to modify</td></tr>
+          <tr><td>Mesh</td><td>Highly reliable</td><td>Expensive and complex</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Wired vs. Wireless Media</h3>
+    <ul>
+      <li><strong>Ethernet Cable</strong> – stable, fast, reliable</li>
+      <li><strong>Fiber Optic Cable</strong> – very high speed, long-distance, immune to electromagnetic interference</li>
+      <li><strong>Wi-Fi</strong> – radio signals for wireless devices</li>
+      <li><strong>Cellular Networks</strong> – 4G, 5G for mobile devices</li>
+    </ul>
+
+    <h3>Network Hardware</h3>
+    <ul>
+      <li><strong>NIC</strong> – Network Interface Card, allows device to connect</li>
+      <li><strong>Hub</strong> – sends data to all connected devices</li>
+      <li><strong>Switch</strong> – sends data intelligently to the intended device</li>
+      <li><strong>Router</strong> – connects different networks together</li>
+      <li><strong>Modem</strong> – connects your network to your ISP</li>
+      <li><strong>Access Point</strong> – allows wireless devices to connect</li>
+    </ul>
+
+    <h3>MAC Address vs. IP Address</h3>
+    <ul>
+      <li><strong>MAC Address</strong> – identifies the network hardware. Like the identity of a network interface.</li>
+      <li><strong>IP Address</strong> – identifies location on a network. Example: 192.168.1.10</li>
+    </ul>
+
+    <h3>Common Network Protocols</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Protocol</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>TCP/IP</td><td>Basic communication across networks</td></tr>
+          <tr><td>HTTP</td><td>Transfers web content</td></tr>
+          <tr><td>HTTPS</td><td>Secure web communication</td></tr>
+          <tr><td>DNS</td><td>Converts domain names into IP addresses</td></tr>
+          <tr><td>FTP</td><td>Transfers files</td></tr>
+          <tr><td>SMTP</td><td>Sends email</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- QUIZ M3T1 -->
+    <div class="quiz-section">
+      <h3>Quiz – Computer Networks</h3>
+
+      <div class="question" data-answer="b">
+        <p>1. What does LAN stand for?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q1" value="a"> a) Large Area Network</label>
+          <label><input type="radio" name="m3q1" value="b"> b) Local Area Network</label>
+          <label><input type="radio" name="m3q1" value="c"> c) Long Access Network</label>
+          <label><input type="radio" name="m3q1" value="d"> d) Linked Area Node</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>2. Which device connects different networks together?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q2" value="a"> a) Hub</label>
+          <label><input type="radio" name="m3q2" value="b"> b) Switch</label>
+          <label><input type="radio" name="m3q2" value="c"> c) Router</label>
+          <label><input type="radio" name="m3q2" value="d"> d) NIC</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>3. What is the difference between a hub and a switch?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q3" value="a"> a) Hub sends to all; switch sends to intended device only</label>
+          <label><input type="radio" name="m3q3" value="b"> b) Hub is wireless; switch is wired</label>
+          <label><input type="radio" name="m3q3" value="c"> c) They are identical</label>
+          <label><input type="radio" name="m3q3" value="d"> d) Hub is faster</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>4. Which topology has multiple connections between devices for high reliability?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q4" value="a"> a) Bus</label>
+          <label><input type="radio" name="m3q4" value="b"> b) Star</label>
+          <label><input type="radio" name="m3q4" value="c"> c) Ring</label>
+          <label><input type="radio" name="m3q4" value="d"> d) Mesh</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <p>5. What does DNS do?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q5" value="a"> a) Transfers files</label>
+          <label><input type="radio" name="m3q5" value="b"> b) Converts domain names into IP addresses</label>
+          <label><input type="radio" name="m3q5" value="c"> c) Sends email</label>
+          <label><input type="radio" name="m3q5" value="d"> d) Encrypts web traffic</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T1">0</span> / 5</div>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 2: Internet &amp; World Wide Web</h2>
+
+    <p>The <strong>Internet</strong> is a global network of interconnected computer networks — a "network of networks."</p>
+
+    <h3>Internet vs. WWW</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Internet</th><th>World Wide Web</th></tr></thead>
+        <tbody>
+          <tr><td>Global network infrastructure</td><td>A service that runs on the Internet</td></tr>
+          <tr><td>Connects networks and devices</td><td>Connects web pages via hyperlinks</td></tr>
+          <tr><td>Supports many services (email, FTP, etc.)</td><td>Primarily accessed via web browsers</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">The Web depends on the Internet, but the Internet can exist without the Web.</div>
+
+    <h3>Three Important Parts of the Web</h3>
+    <ul>
+      <li><strong>Web Browser</strong> – Chrome, Firefox, Edge, Safari</li>
+      <li><strong>Web Server</strong> – stores, processes, and provides websites</li>
+      <li><strong>Web Protocols</strong> – HTTP, HTTPS</li>
+    </ul>
+
+    <h3>How Visiting a Website Works</h3>
+    <ol>
+      <li>You type a URL into your browser.</li>
+      <li>DNS translates the domain name into an IP address.</li>
+      <li>Your browser connects and sends a request to the server.</li>
+      <li>The server responds with HTML, CSS, JS, and images.</li>
+      <li>Browser renders the code and displays the website.</li>
+    </ol>
+
+    <h3>What Is a URL?</h3>
+    <div class="example-box">
+      https://www.example.com/products<br><br>
+      <strong>https://</strong> — Protocol: how browser &amp; server communicate.<br>
+      <strong>www.example.com</strong> — Domain: identifies the website.<br>
+      <strong>/products</strong> — Path: specific page or file.
+    </div>
+
+    <h3>HTTP vs. HTTPS</h3>
+    <ul>
+      <li><strong>HTTP</strong> – plain text, readable if intercepted</li>
+      <li><strong>HTTPS</strong> – encrypted, protects passwords, personal info, payment details</li>
+    </ul>
+
+    <h3>DNS – Domain Name System</h3>
+    <p>Computers use IP addresses, but humans prefer names like google.com. DNS acts like the Internet's contact list.</p>
+
+    <h3>Common Internet Protocols</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Protocol</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>HTTP</td><td>Transfers standard web content</td></tr>
+          <tr><td>HTTPS</td><td>Secure, encrypted web communication</td></tr>
+          <tr><td>TCP</td><td>Reliably delivers data packets in order</td></tr>
+          <tr><td>IP</td><td>Addresses and routes data to the correct destination</td></tr>
+          <tr><td>DNS</td><td>Converts domain names to IP addresses</td></tr>
+          <tr><td>SMTP</td><td>Sends email messages</td></tr>
+          <tr><td>FTP</td><td>Transfers files between clients and servers</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Client and Server</h3>
+    <ul>
+      <li><strong>Client</strong> – requests a service (browser, mobile app, desktop software)</li>
+      <li><strong>Server</strong> – provides data, resources, or services (website, game, email servers)</li>
+    </ul>
+
+    <h3>Static vs. Dynamic Websites</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Static</th><th>Dynamic</th></tr></thead>
+        <tbody>
+          <tr><td>Same content to every visitor</td><td>Changes based on user, database, time, location</td></tr>
+          <tr><td>Portfolio sites, basic info pages</td><td>Facebook, online banking, Amazon</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Evolution of the Web</h3>
+    <ul>
+      <li><strong>Web 1.0 (Read)</strong> – mostly static information</li>
+      <li><strong>Web 2.0 (Read/Write)</strong> – users post, comment, share. Social media, blogs, wikis.</li>
+      <li><strong>Modern Web (Interactive)</strong> – intelligent, personalized, AI-driven, real-time collaboration</li>
+    </ul>
+
+    <!-- QUIZ M3T2 -->
+    <div class="quiz-section">
+      <h3>Quiz – Internet &amp; WWW</h3>
+
+      <div class="question" data-answer="a">
+        <p>1. What is the main difference between the Internet and the WWW?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q6" value="a"> a) Internet is infrastructure; WWW is a service on it</label>
+          <label><input type="radio" name="m3q6" value="b"> b) They are the same thing</label>
+          <label><input type="radio" name="m3q6" value="c"> c) WWW is older than the Internet</label>
+          <label><input type="radio" name="m3q6" value="d"> d) Internet only works on phones</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>2. What does DNS do?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q7" value="a"> a) Transfers files</label>
+          <label><input type="radio" name="m3q7" value="b"> b) Encrypts passwords</label>
+          <label><input type="radio" name="m3q7" value="c"> c) Translates domain names into IP addresses</label>
+          <label><input type="radio" name="m3q7" value="d"> d) Sends email</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>3. Why is HTTPS important?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q8" value="a"> a) It makes websites load faster</label>
+          <label><input type="radio" name="m3q8" value="b"> b) It removes ads</label>
+          <label><input type="radio" name="m3q8" value="c"> c) It blocks malware</label>
+          <label><input type="radio" name="m3q8" value="d"> d) It encrypts data between browser and website</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <p>4. Which of these is a dynamic website?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q9" value="a"> a) A personal portfolio page</label>
+          <label><input type="radio" name="m3q9" value="b"> b) Facebook feed</label>
+          <label><input type="radio" name="m3q9" value="c"> c) A read-only documentation page</label>
+          <label><input type="radio" name="m3q9" value="d"> d) A basic informational page</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>5. What is the role of a web server?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q10" value="a"> a) Renders HTML in the browser</label>
+          <label><input type="radio" name="m3q10" value="b"> b) Stores user passwords</label>
+          <label><input type="radio" name="m3q10" value="c"> c) Stores, processes, and provides websites</label>
+          <label><input type="radio" name="m3q10" value="d"> d) Assigns IP addresses</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T2">0</span> / 5</div>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 3A: Introduction to HTML</h2>
+
+    <p><strong>HTML</strong> stands for <strong>HyperText Markup Language</strong>. It's not a programming language — it's a markup language that structures content on the web.</p>
+
+    <h3>HTML vs. CSS vs. JavaScript</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Technology</th><th>Role</th><th>House Analogy</th></tr></thead>
+        <tbody>
+          <tr><td>HTML</td><td>Structure / content</td><td>Walls, rooms, roof</td></tr>
+          <tr><td>CSS</td><td>Appearance / design</td><td>Paint, decor, carpet</td></tr>
+          <tr><td>JavaScript</td><td>Behavior / interactivity</td><td>Electricity, moving doors</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tags vs. Elements</h3>
+    <ul>
+      <li><strong>Tag</strong> – a marker like <code>&lt;p&gt;</code></li>
+      <li><strong>Element</strong> – the complete structure: <code>&lt;p&gt;Hello&lt;/p&gt;</code> (opening tag + content + closing tag)</li>
+    </ul>
+
+    <h3>Void Elements</h3>
+    <p>Some tags don't contain text and don't need closing tags: <code>&lt;br&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;hr&gt;</code>.</p>
+
+    <h3>Basic Document Structure</h3>
+    <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My First Web Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;This is my webpage.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+    <h3>Common HTML Elements</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Element</th><th>Tag</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Headings</td><td><code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></td><td>Six levels; h1 is largest</td></tr>
+          <tr><td>Paragraphs</td><td><code>&lt;p&gt;</code></td><td>Standard text blocks</td></tr>
+          <tr><td>Line Breaks</td><td><code>&lt;br&gt;</code></td><td>Single line break (void)</td></tr>
+          <tr><td>Emphasis</td><td><code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code></td><td>Bold / italic</td></tr>
+          <tr><td>Links</td><td><code>&lt;a href="..."&gt;</code></td><td>Hyperlinks</td></tr>
+          <tr><td>Images</td><td><code>&lt;img src="..." alt="..."&gt;</code></td><td>Embed images (void)</td></tr>
+          <tr><td>Unordered Lists</td><td><code>&lt;ul&gt;&lt;li&gt;</code></td><td>Bullet points</td></tr>
+          <tr><td>Ordered Lists</td><td><code>&lt;ol&gt;&lt;li&gt;</code></td><td>Numbered items</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>HTML Best Practices</h3>
+    <ul>
+      <li><strong>Nest elements properly</strong> – Last In, First Out</li>
+      <li><strong>Indentation</strong> – makes code readable</li>
+      <li><strong>Use comments</strong> – <code>&lt;!-- comment --&gt;</code></li>
+    </ul>
+
+    <!-- QUIZ M3T3A -->
+    <div class="quiz-section">
+      <h3>Quiz – HTML</h3>
+
+      <div class="question" data-answer="c">
+        <p>1. What does HTML stand for?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q11" value="a"> a) HyperText Markup Logic</label>
+          <label><input type="radio" name="m3q11" value="b"> b) HighText Machine Language</label>
+          <label><input type="radio" name="m3q11" value="c"> c) HyperText Markup Language</label>
+          <label><input type="radio" name="m3q11" value="d"> d) Home Tool Markup Language</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>2. Is HTML a programming language?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q12" value="a"> a) No, it's a markup language</label>
+          <label><input type="radio" name="m3q12" value="b"> b) Yes, it's a programming language</label>
+          <label><input type="radio" name="m3q12" value="c"> c) Yes, it's compiled</label>
+          <label><input type="radio" name="m3q12" value="d"> d) No, it's a database</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>3. What is the purpose of the <code>&lt;body&gt;</code> element?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q13" value="a"> a) Contains metadata</label>
+          <label><input type="radio" name="m3q13" value="b"> b) Defines the page title</label>
+          <label><input type="radio" name="m3q13" value="c"> c) Links to CSS</label>
+          <label><input type="radio" name="m3q13" value="d"> d) Contains visible content</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <p>4. What's the difference between a tag and an element?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q14" value="a"> a) They're the same</label>
+          <label><input type="radio" name="m3q14" value="b"> b) A tag is just the marker; an element is tag + content + closing tag</label>
+          <label><input type="radio" name="m3q14" value="c"> c) A tag has attributes; an element doesn't</label>
+          <label><input type="radio" name="m3q14" value="d"> d) Elements don't have closing tags</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>5. What does the <code>href</code> attribute do?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q15" value="a"> a) Sets the image source</label>
+          <label><input type="radio" name="m3q15" value="b"> b) Adds alternative text</label>
+          <label><input type="radio" name="m3q15" value="c"> c) Tells the browser where a link goes</label>
+          <label><input type="radio" name="m3q15" value="d"> d) Centers the text</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T3A">0</span> / 5</div>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 3B: Introduction to CSS</h2>
+
+    <p><strong>CSS</strong> stands for <strong>Cascading Style Sheets</strong>. It controls the appearance, positioning, and layout of HTML elements.</p>
+    <div class="note">HTML = What is on the page. CSS = How it looks.</div>
+
+    <h3>Why CSS?</h3>
+    <ul>
+      <li><strong>Visual appeal</strong> – transforms plain HTML into attractive designs</li>
+      <li><strong>Consistency</strong> – uniform branding across pages</li>
+      <li><strong>Separation</strong> – content detached from styling</li>
+      <li><strong>Reusability</strong> – write once, apply everywhere</li>
+    </ul>
+
+    <h3>Anatomy of a CSS Rule</h3>
+    <pre><code>p {
+  color: blue;
+  font-size: 20px;
+}</code></pre>
+    <ul>
+      <li><strong>Selector</strong> – <code>p</code> (which element to style)</li>
+      <li><strong>Property</strong> – <code>color</code>, <code>font-size</code></li>
+      <li><strong>Value</strong> – <code>blue</code>, <code>20px</code></li>
+      <li><strong>Declaration</strong> – property + value + semicolon</li>
+    </ul>
+
+    <h3>Three Primary Selectors</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Selector</th><th>Syntax</th><th>Targets</th></tr></thead>
+        <tbody>
+          <tr><td>Element</td><td><code>p</code></td><td>All tags of a specific type</td></tr>
+          <tr><td>Class</td><td><code>.important</code></td><td>Reusable groups (begin with period)</td></tr>
+          <tr><td>ID</td><td><code>#main-title</code></td><td>One unique element (begin with hash)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Common CSS Properties</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Property</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>color</code></td><td>Text color</td></tr>
+          <tr><td><code>background-color</code></td><td>Element background</td></tr>
+          <tr><td><code>font-size</code></td><td>Text size</td></tr>
+          <tr><td><code>font-family</code></td><td>Typeface</td></tr>
+          <tr><td><code>margin</code> / <code>padding</code></td><td>Spacing outside / inside</td></tr>
+          <tr><td><code>border</code></td><td>Outline around element</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Three Ways to Apply CSS</h3>
+    <ul>
+      <li><strong>Inline</strong> – inside the HTML tag (quick for testing, hard to maintain)</li>
+      <li><strong>Internal</strong> – inside <code>&lt;style&gt;</code> in the head (good for single pages)</li>
+      <li><strong>External</strong> – separate <code>.css</code> file linked with <code>&lt;link&gt;</code> (recommended — cleaner, reusable)</li>
+    </ul>
+
+    <h3>What Does "Cascading" Mean?</h3>
+    <p>When multiple rules target the same element, the browser decides which wins based on:</p>
+    <ol>
+      <li><strong>Importance</strong> – is the rule marked vital?</li>
+      <li><strong>Specificity</strong> – IDs beat Classes. Classes beat Elements.</li>
+      <li><strong>Source Order</strong> – the last rule loaded takes effect.</li>
+    </ol>
+
+    <!-- QUIZ M3T3B -->
+    <div class="quiz-section">
+      <h3>Quiz – CSS</h3>
+
+      <div class="question" data-answer="b">
+        <p>1. What does CSS stand for?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q16" value="a"> a) Computer Style Sheets</label>
+          <label><input type="radio" name="m3q16" value="b"> b) Cascading Style Sheets</label>
+          <label><input type="radio" name="m3q16" value="c"> c) Creative Style System</label>
+          <label><input type="radio" name="m3q16" value="d"> d) Colorful Style Sheets</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>2. Which selector always begins with a period?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q17" value="a"> a) Class selector</label>
+          <label><input type="radio" name="m3q17" value="b"> b) ID selector</label>
+          <label><input type="radio" name="m3q17" value="c"> c) Element selector</label>
+          <label><input type="radio" name="m3q17" value="d"> d) Universal selector</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>3. Which method is best for reusable styling across multiple pages?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q18" value="a"> a) Inline CSS</label>
+          <label><input type="radio" name="m3q18" value="b"> b) Internal CSS</label>
+          <label><input type="radio" name="m3q18" value="c"> c) Inline + Internal</label>
+          <label><input type="radio" name="m3q18" value="d"> d) External CSS</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>4. In specificity, which wins?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q19" value="a"> a) Element beats Class</label>
+          <label><input type="radio" name="m3q19" value="b"> b) Class beats ID</label>
+          <label><input type="radio" name="m3q19" value="c"> c) ID beats Class, Class beats Element</label>
+          <label><input type="radio" name="m3q19" value="d"> d) All are equal</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>5. What is the correct way to link an external CSS file?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q20" value="a"> a) <code>&lt;link rel="stylesheet" href="style.css"&gt;</code></label>
+          <label><input type="radio" name="m3q20" value="b"> b) <code>&lt;style src="style.css"&gt;</code></label>
+          <label><input type="radio" name="m3q20" value="c"> c) <code>&lt;css href="style.css"&gt;</code></label>
+          <label><input type="radio" name="m3q20" value="d"> d) <code>&lt;script href="style.css"&gt;</code></label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T3B">0</span> / 5</div>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 4: Types of Cyber Threats</h2>
+
+    <p>A <strong>cyber threat</strong> compromises digital systems and users at every level — individuals, organizations, and society.</p>
+
+    <h3>Malicious Software (Malware)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Behavior</th></tr></thead>
+        <tbody>
+          <tr><td>Computer Virus</td><td>Attaches to legitimate files, spreads on execution</td></tr>
+          <tr><td>Computer Worm</td><td>Replicates and spreads independently</td></tr>
+          <tr><td>Trojan Horse</td><td>Disguises as legitimate software</td></tr>
+          <tr><td>Ransomware</td><td>Encrypts files, demands payment</td></tr>
+          <tr><td>Spyware</td><td>Secretly monitors activity</td></tr>
+          <tr><td>Keylogger</td><td>Records keystrokes to capture passwords</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Social Engineering</h3>
+    <p>Psychological manipulation to trick people into revealing information or bypassing security.</p>
+    <ul>
+      <li><strong>Phishing</strong> – fake messages/websites tricking users into providing credentials</li>
+      <li><strong>Spear Phishing</strong> – highly targeted phishing for a specific person or organization</li>
+      <li><strong>Smishing</strong> – phishing through SMS/text messages</li>
+      <li><strong>Vishing</strong> – phishing through voice calls</li>
+      <li><strong>Pharming</strong> – secretly redirecting users to fraudulent sites</li>
+    </ul>
+
+    <h3>Network &amp; Access Attacks</h3>
+    <ul>
+      <li><strong>DoS (Denial-of-Service)</strong> – overloads a system to make it unavailable</li>
+      <li><strong>DDoS</strong> – same but from thousands of compromised devices</li>
+      <li><strong>MITM (Man-in-the-Middle)</strong> – secretly intercepts communication</li>
+    </ul>
+
+    <h3>Data &amp; Internal Risks</h3>
+    <ul>
+      <li><strong>Data Breach</strong> – unauthorized access and exposure of sensitive info</li>
+      <li><strong>Insider Threat</strong> – authorized users misusing their access</li>
+    </ul>
+
+    <h3>The Golden Rule of Defense</h3>
+    <ol>
+      <li><strong>STOP</strong> – pause before reacting to urgent demands</li>
+      <li><strong>THINK</strong> – evaluate the source for suspicious signs</li>
+      <li><strong>VERIFY</strong> – confirm authenticity through official channels</li>
+    </ol>
+
+    <!-- QUIZ M3T4 -->
+    <div class="quiz-section">
+      <h3>Quiz – Cyber Threats</h3>
+
+      <div class="question" data-answer="c">
+        <p>1. What type of malware encrypts files and demands payment?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q21" value="a"> a) Virus</label>
+          <label><input type="radio" name="m3q21" value="b"> b) Spyware</label>
+          <label><input type="radio" name="m3q21" value="c"> c) Ransomware</label>
+          <label><input type="radio" name="m3q21" value="d"> d) Worm</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>2. What is phishing?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q22" value="a"> a) Fake messages tricking users into giving credentials</label>
+          <label><input type="radio" name="m3q22" value="b"> b) Overloading a server</label>
+          <label><input type="radio" name="m3q22" value="c"> c) Encrypting files</label>
+          <label><input type="radio" name="m3q22" value="d"> d) Intercepting network traffic</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>3. What is the difference between DoS and DDoS?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q23" value="a"> a) DoS is wireless; DDoS is wired</label>
+          <label><input type="radio" name="m3q23" value="b"> b) They are the same</label>
+          <label><input type="radio" name="m3q23" value="c"> c) DoS targets individuals; DDoS targets governments</label>
+          <label><input type="radio" name="m3q23" value="d"> d) DDoS comes from thousands of compromised devices</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <p>4. What is an insider threat?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q24" value="a"> a) An external hacker</label>
+          <label><input type="radio" name="m3q24" value="b"> b) An authorized user misusing their access</label>
+          <label><input type="radio" name="m3q24" value="c"> c) A phishing email</label>
+          <label><input type="radio" name="m3q24" value="d"> d) A software bug</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>5. What is the correct order of the Golden Rule of Defense?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q25" value="a"> a) Verify → Think → Stop</label>
+          <label><input type="radio" name="m3q25" value="b"> b) Think → Stop → Verify</label>
+          <label><input type="radio" name="m3q25" value="c"> c) Stop → Think → Verify</label>
+          <label><input type="radio" name="m3q25" value="d"> d) Stop → Verify → Think</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T4">0</span> / 5</div>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 5: Categories of Cybersecurity</h2>
+
+    <p>Cybersecurity protects computers, networks, and data from unauthorized access or damage. It is divided into categories for specialized protection.</p>
+
+    <div class="card">
+      <h3>1. Network Security</h3>
+      <p>Protects computer networks from unauthorized access and disruptions.</p>
+      <p><strong>Measures:</strong> Firewalls, network monitoring, intrusion detection, secure Wi-Fi, segmentation.</p>
+    </div>
+
+    <div class="card">
+      <h3>2. Information Security</h3>
+      <p>Protects digital and physical information from theft or alteration. Uses the <strong>CIA Triad</strong>:</p>
+      <ul>
+        <li><strong>Confidentiality</strong> – access restricted to authorized personnel</li>
+        <li><strong>Integrity</strong> – information remains completely unchanged</li>
+        <li><strong>Availability</strong> – information accessible when strictly needed</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>3. Application Security</h3>
+      <p>Protects software and web applications from vulnerabilities.</p>
+      <p><strong>Targets:</strong> Websites, mobile apps, online banking.</p>
+      <p><strong>Defenses:</strong> Secure coding, input validation, software updates.</p>
+    </div>
+
+    <div class="card">
+      <h3>4. Endpoint Security</h3>
+      <p>Protects individual devices connected to the network.</p>
+      <ul>
+        <li>Laptops – antivirus installation required</li>
+        <li>Smartphones – screen locks enforced</li>
+        <li>Tablets – device encryption enabled</li>
+        <li>Printers – security firmware updated</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>5. Cloud Security</h3>
+      <p>Protects data, applications, and services hosted in cloud environments.</p>
+      <p><strong>Protected services:</strong> Google Drive, OneDrive, online databases.</p>
+      <p><strong>Measures:</strong> Strong authentication, data encryption, automated backups.</p>
+    </div>
+
+    <div class="card">
+      <h3>6. Identity &amp; Access Management (IAM)</h3>
+      <p>Controls identities and defines access permissions.</p>
+      <ul>
+        <li><strong>Authentication</strong> – "Who are you?"</li>
+        <li><strong>Authorization</strong> – "What are you allowed to do?"</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>7. Operational Security</h3>
+      <p>Protects daily processes and procedures.</p>
+    </div>
+
+    <h3>Defense in Depth</h3>
+    <p>Multiple layers work together. If one fails, others protect.</p>
+    <ul>
+      <li><strong>User</strong> – Strong passwords + MFA</li>
+      <li><strong>Device</strong> – Antivirus + Updates</li>
+      <li><strong>Network</strong> – Firewalls + Monitoring</li>
+      <li><strong>Application</strong> – Secure coding</li>
+      <li><strong>Data</strong> – Encryption + Backups</li>
+    </ul>
+
+    <h3>Example: Online Banking Account</h3>
+    <p>One system involves multiple cybersecurity categories: phone screen lock, password &amp; OTP/MFA, secure banking app, encrypted connection, protected bank servers.</p>
+
+    <!-- QUIZ M3T5 -->
+    <div class="quiz-section">
+      <h3>Quiz – Cybersecurity Categories</h3>
+
+      <div class="question" data-answer="a">
+        <p>1. What does the CIA Triad stand for?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q26" value="a"> a) Confidentiality, Integrity, Availability</label>
+          <label><input type="radio" name="m3q26" value="b"> b) Control, Inspection, Access</label>
+          <label><input type="radio" name="m3q26" value="c"> c) Central, Internal, Applied</label>
+          <label><input type="radio" name="m3q26" value="d"> d) Cyber, Information, Analysis</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="b">
+        <p>2. Which category protects individual devices like laptops and phones?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q27" value="a"> a) Network Security</label>
+          <label><input type="radio" name="m3q27" value="b"> b) Endpoint Security</label>
+          <label><input type="radio" name="m3q27" value="c"> c) Cloud Security</label>
+          <label><input type="radio" name="m3q27" value="d"> d) Application Security</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>3. What does IAM control?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q28" value="a"> a) Network cables</label>
+          <label><input type="radio" name="m3q28" value="b"> b) Physical locks</label>
+          <label><input type="radio" name="m3q28" value="c"> c) Identities and access permissions</label>
+          <label><input type="radio" name="m3q28" value="d"> d) Backup schedules</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>4. What is "Defense in Depth"?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q29" value="a"> a) Using one very strong firewall</label>
+          <label><input type="radio" name="m3q29" value="b"> b) Avoiding all technology</label>
+          <label><input type="radio" name="m3q29" value="c"> c) Encrypting everything</label>
+          <label><input type="radio" name="m3q29" value="d"> d) Multiple layers working together</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>5. Which category protects Google Drive and OneDrive?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q30" value="a"> a) Cloud Security</label>
+          <label><input type="radio" name="m3q30" value="b"> b) Endpoint Security</label>
+          <label><input type="radio" name="m3q30" value="c"> c) Network Security</label>
+          <label><input type="radio" name="m3q30" value="d"> d) Operational Security</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T5">0</span> / 5</div>
+    </div>
+
+    <!-- ==================================================== -->
+    <h2>Topic 6: Cybersecurity Technologies</h2>
+
+    <p>Hardware, software, and techniques designed to defend digital infrastructure.</p>
+    <div class="note">Cyber Threat → Security Tech → Protection. Example: Malware → Antivirus → Removal.</div>
+
+    <h3>Common Technologies</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Technology</th><th>Main Purpose</th></tr></thead>
+        <tbody>
+          <tr><td>Firewall</td><td>Controls incoming and outgoing network traffic</td></tr>
+          <tr><td>Antivirus</td><td>Detects, prevents, removes malicious software</td></tr>
+          <tr><td>Encryption</td><td>Protects information from unauthorized viewing</td></tr>
+          <tr><td>Authentication / MFA</td><td>Verifies user identity through multiple factors</td></tr>
+          <tr><td>VPN</td><td>Creates a protected, encrypted network connection</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>How a Firewall Works</h3>
+    <ol>
+      <li><strong>Request</strong> – traffic reaches firewall</li>
+      <li><strong>Inspect</strong> – checked against rules</li>
+      <li><strong>Decide</strong> – allow or block</li>
+    </ol>
+    <div class="warning">A firewall does not protect against every threat. It cannot stop a user from voluntarily downloading a malicious file.</div>
+
+    <h3>Antivirus Core Loop</h3>
+    <p>Scan → Detect → Quarantine → Remove.</p>
+    <div class="note">Regular updates are crucial to recognize new threat signatures.</div>
+
+    <h3>Encryption</h3>
+    <p>Converts readable information (plaintext) into an unreadable form (ciphertext).</p>
+    <div class="example-box">MY PASSWORD → (encryption key) → 7x@K92#m...</div>
+    <p><strong>Where used:</strong> messaging, online shopping, online banking, web browsing, file storage, device data.</p>
+
+    <h3>Authentication Factors</h3>
+    <ul>
+      <li><strong>Something You Know</strong> – password, PIN</li>
+      <li><strong>Something You Have</strong> – smartphone, security key, hardware token</li>
+      <li><strong>Something You Are</strong> – fingerprint, facial recognition, biometrics</li>
+    </ul>
+
+    <h3>Multi-Factor Authentication (MFA)</h3>
+    <p>Requires two or more different authentication factors.</p>
+    <div class="example-box">Password (something you know) + Phone code (something you have) = MFA Secured</div>
+
+    <h3>Password Managers</h3>
+    <p>Securely stores and manages passwords. Generates strong passwords, stores credentials safely, autofills login forms, reduces password reuse.</p>
+    <div class="note">Best practice: One account = One unique password.</div>
+
+    <h3>Virtual Private Network (VPN)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Without VPN</th><th>With VPN</th></tr></thead>
+        <tbody>
+          <tr><td>Device → Internet</td><td>Device → VPN Server → Internet</td></tr>
+          <tr><td>Traffic is exposed and observable</td><td>Traffic is encrypted and routed securely</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>IDS vs. IPS</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>IDS</th><th>IPS</th></tr></thead>
+        <tbody>
+          <tr><td>Intrusion Detection System</td><td>Intrusion Prevention System</td></tr>
+          <tr><td>Detects and alerts</td><td>Detects and blocks</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>SSL / TLS</h3>
+    <ul>
+      <li><strong>HTTP</strong> – unsecured connection</li>
+      <li><strong>HTTPS</strong> – HTTP protected by TLS</li>
+    </ul>
+
+    <h3>Digital Certificates</h3>
+    <p>Establishes the identity of a website or server. Like an online ID card — helps the browser verify it's communicating with the legitimate website, not an imposter.</p>
+
+    <h3>Backup and Recovery</h3>
+    <p>A backup is a copy of important data stored separately from the original.</p>
+    <p><strong>Why backup?</strong> To recover if the original is deleted, corrupted, lost, or encrypted by ransomware.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td>Full Backup</td><td>Copies all selected data completely</td></tr>
+          <tr><td>Incremental</td><td>Copies only data changed since last backup</td></tr>
+          <tr><td>Cloud Backup</td><td>Stores copies off-site via cloud service</td></tr>
+          <tr><td>External</td><td>Stores data on physical, detached media</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">A backup is useful only if it can actually be restored. Test regularly.</div>
+
+    <h3>Access Control</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Role</th><th>Access Level</th></tr></thead>
+        <tbody>
+          <tr><td>Student</td><td>View own grades</td></tr>
+          <tr><td>Instructor</td><td>Enter and modify grades</td></tr>
+          <tr><td>Registrar</td><td>Manage broad academic records</td></tr>
+          <tr><td>Administrator</td><td>Manage core system functions</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">Principle of Least Privilege: Give users only the access they strictly need.</div>
+
+    <h3>Security Updates &amp; Patches</h3>
+    <p>Vulnerability → Patch Released → Installation → Secured.</p>
+
+    <h3>SIEM</h3>
+    <p>Security Information and Event Management — collects and analyzes logs globally, identifies unusual patterns, and generates alerts.</p>
+
+    <h3>Technology vs. Threat</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Cyber Threat</th><th>Security Technology</th></tr></thead>
+        <tbody>
+          <tr><td>Malware</td><td>Antivirus / Anti-malware</td></tr>
+          <tr><td>Unauthorized Network Access</td><td>Firewall / IDS / IPS</td></tr>
+          <tr><td>Data Interception in Transit</td><td>TLS / VPN</td></tr>
+          <tr><td>Account Takeover</td><td>MFA / Password Manager</td></tr>
+          <tr><td>Data Loss / Ransomware</td><td>Backup Systems</td></tr>
+          <tr><td>Software Vulnerability Exploits</td><td>Security Patches</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>The Reality</h3>
+    <p>Technology alone is not enough. Security fails primarily due to human error, phishing susceptibility, weak password habits, and unsafe downloads.</p>
+    <div class="note">People + Processes + Technology = Cybersecurity</div>
+
+    <!-- QUIZ M3T6 -->
+    <div class="quiz-section">
+      <h3>Quiz – Cybersecurity Technologies</h3>
+
+      <div class="question" data-answer="b">
+        <p>1. What does a firewall do?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q31" value="a"> a) Encrypts files</label>
+          <label><input type="radio" name="m3q31" value="b"> b) Controls incoming and outgoing network traffic</label>
+          <label><input type="radio" name="m3q31" value="c"> c) Backs up data</label>
+          <label><input type="radio" name="m3q31" value="d"> d) Verifies identity</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>2. What does encryption do?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q32" value="a"> a) Converts readable info into unreadable form</label>
+          <label><input type="radio" name="m3q32" value="b"> b) Deletes files</label>
+          <label><input type="radio" name="m3q32" value="c"> c) Speeds up the network</label>
+          <label><input type="radio" name="m3q32" value="d"> d) Blocks websites</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="d">
+        <p>3. What is the difference between IDS and IPS?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q33" value="a"> a) IDS blocks; IPS alerts</label>
+          <label><input type="radio" name="m3q33" value="b"> b) They are identical</label>
+          <label><input type="radio" name="m3q33" value="c"> c) IDS is hardware; IPS is software</label>
+          <label><input type="radio" name="m3q33" value="d"> d) IDS detects and alerts; IPS detects and blocks</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="c">
+        <p>4. What are the three authentication factors?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q34" value="a"> a) Firewall, Antivirus, VPN</label>
+          <label><input type="radio" name="m3q34" value="b"> b) IDS, IPS, SIEM</label>
+          <label><input type="radio" name="m3q34" value="c"> c) Know, Have, Are</label>
+          <label><input type="radio" name="m3q34" value="d"> d) Full, Incremental, Cloud</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="question" data-answer="a">
+        <p>5. What is the Principle of Least Privilege?</p>
+        <div class="options">
+          <label><input type="radio" name="m3q35" value="a"> a) Give users only the access they strictly need</label>
+          <label><input type="radio" name="m3q35" value="b"> b) Give everyone admin access</label>
+          <label><input type="radio" name="m3q35" value="c"> c) Remove all passwords</label>
+          <label><input type="radio" name="m3q35" value="d"> d) Share credentials with the team</label>
+        </div>
+        <button class="check-btn" onclick="checkAnswer(this)">Check Answer</button>
+        <div class="feedback"></div>
+      </div>
+
+      <div class="score-box">Score: <span id="scoreM3T6">0</span> / 5</div>
+    </div>
+
+  </main>
+</div>
+
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+  function checkAnswer(btn) {
+    const q = btn.closest('.question');
+    const ans = q.dataset.answer;
+    const sel = q.querySelector('input[type="radio"]:checked');
+    const fb = q.querySelector('.feedback');
+    if (!sel) { fb.textContent = 'Pick an answer before checking.'; fb.className = 'feedback wrong show'; return; }
+    if (sel.value === ans) { fb.textContent = '✓ Correct!'; fb.className = 'feedback correct show'; }
+    else { fb.textContent = '✗ Wrong. Try again!'; fb.className = 'feedback wrong show'; }
+    updateScores();
+  }
+
+  function updateScores() {
+    const all = document.querySelectorAll('.question');
+    const ranges = [
+      { id: 'scoreM3T1', start: 0, end: 5 },
+      { id: 'scoreM3T2', start: 5, end: 10 },
+      { id: 'scoreM3T3A', start: 10, end: 15 },
+      { id: 'scoreM3T3B', start: 15, end: 20 },
+      { id: 'scoreM3T4', start: 20, end: 25 },
+      { id: 'scoreM3T5', start: 25, end: 30 },
+      { id: 'scoreM3T6', start: 30, end: 35 }
+    ];
+    ranges.forEach(r => {
+      let s = 0;
+      for (let i = r.start; i < r.end && i < all.length; i++) {
+        const q = all[i];
+        const sel = q.querySelector('input[type="radio"]:checked');
+        if (sel && sel.value === q.dataset.answer) s++;
+      }
+      const el = document.getElementById(r.id);
+      if (el) el.textContent = s;
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    const btn = document.getElementById('topBtn');
+    btn.classList.toggle('show', window.scrollY > 400);
+    const p = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+    document.getElementById('scrollProgress').style.width = p + '%';
+  });
+</script>
+
+</body>
+</html>
